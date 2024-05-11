@@ -17,6 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/news', function () {
+    return view('news');
+});
+
 Route::get('/about', function () {
-    return view('about');
+    return view('about', [
+        "about" => "lorem ipsum dolor amet",
+        "email" => "example@mail.com",
+        "phone" => "+628123412"
+        ]);
 });
