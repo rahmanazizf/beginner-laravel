@@ -14,19 +14,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', 
+    ["title" => "Home"]
+);
 });
 
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contact', [
+        "title" => "Contact"
+    ]);
 });
 
 Route::get('/news', function () {
-    return view('news');
+    return view('news', [
+        "title" => "News"
+    ]);
 });
 
 Route::get('/about', function () {
     return view('about', [
+        "title" => "About",
         "about" => "lorem ipsum dolor amet",
         "email" => "example@mail.com",
         "phone" => "+628123412"
