@@ -4,10 +4,10 @@
 <section class="container">
     <div class="content">
         <h1>Latest News</h1>
-        @foreach($posts as $post)
+        @foreach($posts as $p)
         <div class="news-article">
-            <h2><a href="/news/{{ $post['slug'] }}">{{ $post['title'] }}</a></h2>
-            <p>{{ $post['body'] }}</p>
+            <h2><a href="/news/{{ $p->id }}">{{ $p->title }}</a></h2>
+            <p>{{ $p->body }}</p>
         </div>
         @endforeach
     </div>
