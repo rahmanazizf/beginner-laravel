@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,11 +26,14 @@ Route::get('/contact', function () {
     ]);
 });
 
-Route::get('/news', function () {
-    return view('news', [
-        "title" => "News"
-    ]);
-});
+// Route::get('/news', function () {
+//     return view('news', [
+//         "title" => "News"
+//     ]);
+// });
+Route::get('/news', [PostController::class, 'showAll']);
+Route::get('/news/{slug}', [PostController::class, 'showArticle']);
+
 
 Route::get('/about', function () {
     return view('about', [

@@ -3,13 +3,11 @@
 @section('container')
 <section class="container">
     <div class="content">
-        <h1>Latest News</h1>
-        @foreach($posts as $post)
         <div class="news-article">
-            <h2><a href="/news/{{ $post['slug'] }}">{{ $post['title'] }}</a></h2>
+            <h1>{{ $post['title'] }}</h1>
             <p>{{ $post['body'] }}</p>
+            <a href="/news">Back to the previous page</a>
         </div>
-        @endforeach
     </div>
 </section>
 @endsection
