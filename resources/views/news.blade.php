@@ -6,7 +6,7 @@
         <h1>Latest News</h1>
         @foreach($posts as $p)
         <div class="news-article">
-            <h2><a href="/news/{{ $p->id }}">{{ $p->title }}</a></h2>
+            <h2><a href="/news/{{ $p->slug }}">{{ $p->title }}</a></h2>
             <p>{{ $p->body }}</p>
         </div>
         @endforeach

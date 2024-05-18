@@ -18,7 +18,7 @@ class PostController extends Controller
     public function showArticle(Post $post) {
         return view('article', [
             "title" => "News",
-            "post" => Post::find($post)
+            "post" => $post
         ]);
     }
 }
