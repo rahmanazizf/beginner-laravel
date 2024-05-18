@@ -26,13 +26,8 @@ Route::get('/contact', function () {
     ]);
 });
 
-// Route::get('/news', function () {
-//     return view('news', [
-//         "title" => "News"
-//     ]);
-// });
 Route::get('/news', [PostController::class, 'showAll']);
-Route::get('/news/{slug}', [PostController::class, 'showArticle']);
+Route::get('/news/{post:slug}', [PostController::class, 'showArticle']);
 
 
 Route::get('/about', function () {

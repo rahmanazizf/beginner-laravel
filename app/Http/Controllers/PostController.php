@@ -11,14 +11,14 @@ class PostController extends Controller
     public function showAll() {
         return view('news', [
             "title" => "News",
-            "posts" => Post::all(),
+            "posts" => Post::all()
         ]);
     }
 
-    public function showArticle($id) {
+    public function showArticle(Post $post) {
         return view('article', [
             "title" => "News",
-            "post" => Post::find($id)
+            "post" => Post::find($post)
         ]);
     }
 }
